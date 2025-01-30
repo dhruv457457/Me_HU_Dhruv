@@ -87,3 +87,33 @@ button:active {
     justify-content: center;
     gap: 20px;
 }
+
+@media(width >= 800px) {
+    .container {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .hero{
+        max-width: 350px;
+        width: 350px;
+    }
+    .desc {
+        font-size: 1.2rem;
+    }
+}
+
+@media(width >= 1400px) {
+    .container {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .hero{
+        max-width: 400px;
+        width: 400px;
+    }
+    .desc {
+        font-size: 1.2rem;
+    }
+}

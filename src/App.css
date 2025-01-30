@@ -55,9 +55,51 @@ p{
     font-weight: 300;
 }
 .sectionTitle{
+    margin-top: 30px;
     margin-bottom: 30px;
 
 }
 .hover{
     cursor: pointer;
+}
+
+@media(width >= 800px){
+    #root{
+        gap:100px;
+    }
+    h1{
+        font-size: 40px;
+
+    }
+    h2,h3{
+        font-size: 24px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .sectionTitle{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+}
+@media(width >= 1400px){
+    #root{
+        gap:200px;
+    }
+    h1{
+        font-size: 40px;
+
+    }
+    h2,h3{
+        font-size: 24px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .sectionTitle{
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+
 }

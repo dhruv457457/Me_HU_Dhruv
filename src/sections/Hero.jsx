@@ -13,10 +13,10 @@ import CV from '../assets/cv.pdf';
 
 function Hero() {
     const {theme , toggleTheme} = useTheme();
+    const github = theme === 'light'?gl :gd ;
     const themeIcon = theme === 'light' ? sun : moon;
     const twit = theme === 'light' ? tl :td;
     const linkdin = theme === 'light'? Ll:Ld ;
-    const github = theme === 'light'?gl :gd ;
     return (
     <section id="hero" className={styles.container} >
         <div className={styles.colorMode} ><img className={styles.hero} src={heroimage} alt="profile pic" />
