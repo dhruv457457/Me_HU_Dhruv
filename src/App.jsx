@@ -1,12 +1,16 @@
 import React from 'react';
-import Hero from './components/Hero';
-import './index.css';
+import './App.css';
+import Hero from "./sections/Hero.jsx";
+import Projects from './sections/Projects.jsx';
+import Skill from './sections/Skill.jsx';
+;// import MenuPort from './components/MenuPort';
 
 const App = () => {
   return (
     <div>
       <Hero />
-      {/* Add other sections here: Projects, Skills, Achievements, Contact */}
+      <Projects />
+      <Skill />
     </div>
   );
 };

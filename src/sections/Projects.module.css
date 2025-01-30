@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img{
+        max-width: 250px;
+        align-self: center;
+        background-color: var(--project-card-bg);
+        border-radius: 20px;
+    }
+    a{
+        width:fit-content;
+        text-decoration: none;
+        color: #222;
+        transition: transform 200ms ease-in-out;
+    }
+    a:hover{
+        transform: scale(1.5);
+    }
+    .ProjectsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+}

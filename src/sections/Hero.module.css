@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    height: 100vh;
+    min-height: 500px;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.hero {
+    max-width: 200px;
+}
+
+span {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+span a {
+    margin: 0;
+}
+
+span a img {
+    width: 30px; /* Set fixed width for consistency */
+    height: 30px;
+    align-self: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+span a img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    width: fit-content;
+    align-self: center;
+}
+
+button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 12px;
+    width: 140px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.colorMode {
+    position: relative;
+}
+
+.colorimg {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    cursor: pointer;
+}
+
+.desc {
+    max-width: 40ch; /* Increased for better readability */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
