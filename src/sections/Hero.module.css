@@ -5,9 +5,8 @@
     align-items: center;
     gap: 20px;
     text-align: center;
-    height: 100vh;
-    min-height: 500px;
-    padding: 20px; /* Added padding for better spacing on smaller screens */
+    min-height: 80vh; /* Reduced height for better spacing */
+    padding: 10px 20px; /* Adjusted padding for responsiveness */
 }
 
 .hero {
@@ -25,7 +24,7 @@ span a {
 }
 
 span a img {
-    width: 30px; /* Set fixed width for consistency */
+    width: 30px;
     height: 30px;
     align-self: center;
     transition: transform 0.2s ease-in-out;
@@ -75,7 +74,7 @@ button:active {
 }
 
 .desc {
-    max-width: 40ch; /* Increased for better readability */
+    max-width: 40ch;
     font-size: 1rem;
     line-height: 1.6;
     text-align: center;
@@ -88,31 +87,47 @@ button:active {
     gap: 20px;
 }
 
-@media(width >= 800px) {
+/* ✅ Fix spacing issue on smaller screens */
+@media (max-width: 800px) {
     .container {
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: space-evenly;
+        min-height: auto; /* Prevents extra space at the top */
+        padding: 40px 15px; /* Adds spacing without excess height */
     }
-    .hero{
+}
+
+/* Tablet View */
+@media (min-width: 800px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        min-height: 90vh; /* Adjusted for better balance */
+    }
+
+    .hero {
         max-width: 350px;
         width: 350px;
     }
+
     .desc {
         font-size: 1.2rem;
     }
 }
 
-@media(width >= 1400px) {
+/* Desktop View */
+@media (min-width: 1400px) {
     .container {
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: space-evenly;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        min-height: 100vh;
     }
-    .hero{
+
+    .hero {
         max-width: 400px;
         width: 400px;
     }
+
     .desc {
         font-size: 1.2rem;
     }
