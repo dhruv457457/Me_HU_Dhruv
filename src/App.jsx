@@ -5,7 +5,7 @@ import Projects from './sections/Projects.jsx';
 import Skill from './sections/Skill.jsx';
 import Contact from './sections/Contact.jsx';
 import Footer from './sections/Footer.jsx';
-;// import MenuPort from './components/MenuPort';
+import BotpressChat from './sections/BotpressChat.jsx'; // Import chatbot component
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
       <Projects />
       <Skill />
       <Contact />
+      <BotpressChat /> {/* Chatbot injected before the footer */}
       <Footer />
     </div>
   );
