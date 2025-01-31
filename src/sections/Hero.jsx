@@ -27,13 +27,13 @@ function Hero() {
     <h1>Dhruv <br /> Pancholi</h1>
             <h2>Fronted Devloper </h2>
 <span>
-    <a href="">
-        <img src={twit} alt="twitwr icon" />
+    <a href="https://x.com/DHRUVPANCH3701">
+        <img src={twit} alt="X icon" />
     </a>
-    <a href="">
+    <a href="https://www.linkedin.com/in/dhruv-pancholi-222704250/">
         <img src={linkdin} alt="linkdin icon" />
     </a>
-    <a href="">
+    <a href="https://github.com/dhruv457457">
         <img src={github} alt="github icon" />
     </a>
 </span>
