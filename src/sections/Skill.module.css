@@ -18,7 +18,11 @@
     flex-wrap: wrap;
     row-gap:40px;
     max-width: 26ch;
-
+    
+    p {
+      color: var(--text-color);
+  }
+  
 }
 hr{
   width: 100px;

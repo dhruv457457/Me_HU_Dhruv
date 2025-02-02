@@ -1,43 +1,97 @@
+/* Projects Section Container */
 .container {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 50px 20px;
+    background-color: var(--background-color);
 }
 
-/* Style for images inside .container */
-.container img {
-    max-width: 250px;
-    align-self: center;
-    background-color: var(--project-card-bg);
-    border-radius: 20px;
+/* Section Title */
+.sectionTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 30px;
 }
 
-/* Style for links inside .container */
-.container a {
-    width: fit-content;
-    text-decoration: none;
-    color: #222;
-    transition: transform 200ms ease-in-out;
-}
-
-.container a:hover {
-    transform: scale(1.1);
-}
-
-/* Style for .ProjectsContainer */
+/* Projects Container */
 .ProjectsContainer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
+    width: 100%;
 }
 
-/* Media Query Fix */
-@media (min-width: 800px) { /* Fixed the incorrect media query syntax */
+/* Individual Project Card */
+.projectCard {
+    background: var(--project-card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 320px;
+    text-align: center;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Images */
+.projectCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Project Title */
+.projectCard h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--text-color);
+}
+
+/* Project Description */
+.projectCard p {
+    font-size: 16px;
+    color: var(--form-text-color);
+    margin-bottom: 15px;
+}
+
+/* Project Link Button */
+.projectCard a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--btn-color);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.projectCard a:hover {
+    background: rgba(0, 38, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media (min-width: 800px) {
     .ProjectsContainer {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ProjectsContainer {
         justify-content: space-evenly;
-        padding: 0 30px;
+        gap: 40px;
     }
 }

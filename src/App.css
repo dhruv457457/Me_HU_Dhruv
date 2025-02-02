@@ -1,22 +1,24 @@
-:root{
-    --background-color:#fff;
-    --btn-text-color:#fff;
-    --btn-color:#0026ff;
-    --project-card-bg:#ffffff00;
-    --text-color:#222;
-    --form-text-color:#555;
-    --footer-text-color:#888;
+:root {
+    --background-color: #fff;
+    --btn-text-color: #fff;
+    --btn-color: #0026ff;
+    --project-card-bg: rgba(0, 0, 0, 0.05); /* Light gray for contrast */
+    --text-color: #222; /* Proper text color for light mode */
+    --form-text-color: #555;
+    --footer-text-color: #888;
 }
-[data-theme='dark']{
-    --background-color:#222;
-    --btn-text-color:#222;
-    --btn-color:#fff;
-    --project-card-bg:#fff;
-    --text-color:#fff;
-    --form-text-color:#fff;
-    --footer-text-color:#bbb;
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --btn-text-color: #fff;
+    --btn-color: #00bcd4;
+    --project-card-bg: rgba(255, 255, 255, 0.1);
+    --text-color: #fff;
+    --form-text-color: #ddd;
+    --footer-text-color: #bbb;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 body{
     background-color: var(--background-color);

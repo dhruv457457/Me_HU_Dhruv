@@ -6,11 +6,14 @@ export const ThemeProvider =({children})=>{
         ()=>localStorage.getItem('theme') || 'light'
     );
 
-    useEffect(()=>{
-        document.body.setAttribute('data-theme',theme);
-        localStorage.setItem('theme',theme);
-
-    },[theme]);
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.documentElement.classList.remove(theme === "light" ? "dark" : "light");
+        document.documentElement.classList.add(theme);
+    }, [theme]);
+    
+    
     const toggleTheme =()=>{
         console.log('toggle theme');
         setTheme((prevTheme)=>(prevTheme === 'light' ? 'dark' : 'light'));

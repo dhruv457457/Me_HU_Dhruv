@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styles from './ProjectCard.module.css';
 
-function ProjectCard({src,link,h3,p}) {
+function ProjectCard({ src, link, h3, p }) {
   return (
- <a href={link}   target='_blank' > <img src={src} className='hover' alt='${h3} logo '/>
+    <a href={link} target='_blank' rel='noopener noreferrer' className={styles.card}>
+      <img src={src} alt={`${h3} logo`} className={styles.image} />
+      <div className={styles.cardContent}>
         <h3>{h3}</h3>
         <p>{p}</p>
-        </a>
-  )
+      </div>
+    </a>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;

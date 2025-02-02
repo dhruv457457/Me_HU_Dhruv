@@ -1,0 +1,42 @@
+.card {
+    width: 280px;
+    background: var(--project-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+.image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: var(--btn-text-color);/* Dynamic color */
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+p {
+    color: var(--btn-text-color); /* Ensures visibility in dark mode */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+span {
+    color: var(--btn-text-color); /* Adaptable text color */
+    font-size: 14px;
+    font-weight: bold;
+}
