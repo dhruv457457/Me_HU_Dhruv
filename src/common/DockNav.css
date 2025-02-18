@@ -1,0 +1,80 @@
+/* DockNav.css */
+
+.dock-nav-container {
+    position: fixed;
+    right: 24px; /* equivalent to right-6 */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.dock-nav-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dock-nav-item {
+    position: relative;
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--text-color);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.dock-nav-item:hover {
+    background-color: var(--project-card-bg);
+}
+
+.dock-nav-item:hover .dock-nav-icon {
+    transform: scale(1.1);
+}
+
+.dock-nav-icon {
+    transition: transform 0.2s ease-in-out;
+}
+
+.dock-nav-label {
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.dock-nav-item:hover .dock-nav-label {
+    opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .dock-nav-container {
+        right: 16px;
+    }
+    
+    .dock-nav-panel {
+        padding: 6px;
+        gap: 8px;
+    }
+    
+    .dock-nav-item {
+        padding: 8px;
+    }
+}

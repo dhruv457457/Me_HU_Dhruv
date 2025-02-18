@@ -1,16 +1,25 @@
-import React from 'react';
-import styles from './ProjectCard.module.css';
+import React, { useState } from "react";
+import styles from "./ProjectCard.module.css";
 
-function ProjectCard({ src, link, h3, p }) {
+const ProjectCard = ({ staticSrc, gifSrc, link }) => {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <a href={link} target='_blank' rel='noopener noreferrer' className={styles.card}>
-      <img src={src} alt={`${h3} logo`} className={styles.image} />
-      <div className={styles.cardContent}>
-        <h3>{h3}</h3>
-        <p>{p}</p>
-      </div>
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className={styles.projectCard}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <img 
+        src={hovered ? gifSrc : staticSrc} 
+        alt="Project Preview" 
+        className={styles.projectImage} 
+      />
     </a>
   );
-}
+};
 
 export default ProjectCard;
