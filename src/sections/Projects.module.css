@@ -9,10 +9,17 @@
 
 /* Section Title */
 .sectionTitle {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    color: var(--text-color);
+    color: #ffffff;  /* Set text color to white */
+    text-align: center;
     margin-bottom: 30px;
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #00f;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.sectionTitle:hover {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 50px #00f;
 }
 
 /* Projects Container */
