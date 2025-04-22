@@ -6,8 +6,8 @@ import Contact from './sections/Contact.jsx';
 import Footer from './sections/Footer.jsx';
 import BotpressChat from './sections/BotpressChat.jsx';
 import Achievements from './sections/Achievements.jsx'; 
-// import DockNav from './common/DockNav.jsx'; // Import DockNav
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 const App = () => {
   return (
     <div>
